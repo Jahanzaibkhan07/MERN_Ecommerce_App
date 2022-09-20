@@ -32,7 +32,16 @@ function App() {
             <Route path="/payment" element={<PaymentScreen />} />
             <Route path="/placeOrder" element={<PlaceOrderScreen />} />
             <Route path="/order/:id" element={<OrderScreen />} />
-            <Route path="/admin/orderList" element={<OrderListScreen />} />
+            <Route
+              path="/admin/orderList"
+              element={<OrderListScreen />}
+              exact
+            />
+            <Route
+              path="/admin/orderList/:pageNumber"
+              element={<OrderListScreen />}
+              exact
+            />
             <Route path="/product/:id" element={<ProductScreen />} />
             <Route path="/cart/:id" element={<CartScreen />} />
             <Route path="/cart/" element={<CartScreen />} />
